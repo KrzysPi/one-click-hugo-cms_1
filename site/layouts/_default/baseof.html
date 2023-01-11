@@ -4,7 +4,7 @@
   <body class="sans-serif">
     {{ block "header" . }}{{ partial "nav" . }}{{end}} {{ block "main" . }}{{
     end }} 
-    <div> {{renge .Site.Data.data}} {{.color}} - {{.value}} {{end}} </div>
+    <div> {{range .Site.Data.data}} {{.color}} - {{.value}} {{end}} </div>
     {{ block "footer" . }}{{ partial "footer" . }}{{end}} {{ $script :=
     .Site.Data.webpack.main }} {{ with $script.js }}
     <script src="{{ relURL . }}"></script>
