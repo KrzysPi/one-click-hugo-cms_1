@@ -18,20 +18,16 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Intro Blurb", name: "description", widget: "text" }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+  ###############################################################
+  - name: "data"
+    label: "Data" # name on UI
+    file: "site/data/data.json" # path to data file
+    format: "json"
+    fields: # The fields each document in this collection have
+      - { label: "Color", name: "color", widget: "string" }
+      - { label: "Value", name: "value", widget: "string" }
 
-  ######################## DATA FILE ##################################
-  # https://www.netlifycms.org/docs/collection-types/
-  - label: "Data" # name on UI
-    name: "data"
-    files:
-      - label: "Colors"
-        name: "colors"
-        file: "site/data/data.json" # path to data file
-        fields: # The fields each document in this collection have
-          - { label: "Color", name: "color", widget: "string" }
-          - { label: "Value", name: "value", widget: "string" }
   ################################################################
-
   - name: "pages"
     label: "Pages"
     files:
